@@ -16,15 +16,14 @@ const findMessages = (myPass) => {
     messagesRef.on('value', (snapshot) => {
         const data = snapshot.val();
         console.log(data);
+         document.querySelector('#message').innerText == '';
         for(let key in data) {
             const message = data[key];
             if(myPass == message.passcode) {
-                console.log(message.passcode);
-                renderMessage(message);
+                document.querySelector('#message').innerText += '\n' + message.message;
             }
         }
     });
 }
 
-
-findMessages(1234);
+document.querySelector('#viewMsg').addEventListener('click', (e) => findMessages(document.querySelector('#passcode').value));
