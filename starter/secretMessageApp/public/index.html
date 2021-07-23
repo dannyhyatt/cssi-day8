@@ -17,7 +17,9 @@
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <script src="js/writeMessage.js"></script>
+    <script defer src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/thirdparty/buffer.js"></script>
+    <script defer src="https://raw.githubusercontent.com/ricmoo/scrypt-js/master/scrypt.js" type="text/javascript"></script>
+    <script defer src="js/writeMessage.js"></script>
   </head>
 
   <body>
@@ -45,7 +47,7 @@
               </div>
             </div>
             <br />
-            <button class="button is-block is-fullwidth is-primary is-medium is-rounded">
+            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" id="sendMsgBtn">
               Send Message
             </button>
           </form>
